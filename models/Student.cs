@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace asp_razor_contoso.models
 {
@@ -8,13 +9,13 @@ namespace asp_razor_contoso.models
     {
         public int StudentID { get; set; }
 
-        [DisplayName("Last Name")]
+        [DisplayName("Last Name"), Required, StringLength(20)]
         public string LastName { get; set; }
 
-        [DisplayName("First Name")]
+        [DisplayName("First Name"), Required, StringLength(20)]
         public string FirstName { get; set; }
 
-        [DisplayName("Enrol Date")]
+        [DisplayName("Enrol Date"), DataType(DataType.Date)]
         public DateTime EnrollmentDate { get; set; }
 
         /// <summary>

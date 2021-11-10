@@ -31,9 +31,9 @@ namespace asp_razor_contoso
                 try
                 {
                     var context = services.GetRequiredService<ApplicationDbContext>();
-                    context.Database.EnsureCreated();
+                   /// context.Database.EnsureCreated();
 
-                    context.Database.EnsureCreated();
+                    /// context.Database.EnsureCreated();
                     DbInitialiser.Initialise(context);
                 }
                 catch (Exception ex)
