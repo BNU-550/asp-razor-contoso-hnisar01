@@ -18,7 +18,7 @@ namespace asp_razor_contoso
         {
             var host = CreateHostBuilder(args).Build();
 
-            CreateDbIfNotExists(host);
+             CreateDbIfNotExists(host);
 
             host.Run();
         }
